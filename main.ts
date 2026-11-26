@@ -19,7 +19,7 @@ if (entryText.length > 280) {
 }
 
 const outputDir =
-  process.env.MAKEFUN_BOT_DIR ?? process.env.MAKEFUN_OUTPUT_DIR ?? join(repoRoot, "output");
+  process.env.MAKEFUN_OUTPUT_DIR ?? process.env.MAKEFUN_BOT_DIR ?? join(repoRoot, "output");
 
 mkdirSync(outputDir, { recursive: true });
 writeFileSync(join(outputDir, "entry.txt"), entryText + "\n", "utf8");
